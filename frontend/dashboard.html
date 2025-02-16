@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FixIt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Your Dashboard</h1>
+            <button onclick="logout()" class="btn">Logout</button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <p>You are now logged in. Explore your account settings and services.</p>
+        </div>
+    </main>
+    <script>
+        function logout() {
+            // Clear user session (if any)
+            alert('You have been logged out.');
+            window.location.href = 'index.html'; // Redirect to the login page
+        }
+    </script>
+</body>
+</html>

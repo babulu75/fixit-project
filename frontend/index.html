@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixIt - Auto Repair Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <img src='https://i.postimg.cc/RhG9v9qc/OIP.jpg' pborder='0' alt='FixIt Logo' class="logo">
+        <h1>FixIt</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn" onclick="openPopup('loginPopup')">Login</button>
+        <button class="btn" onclick="openPopup('signupPopup')">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Your Trusted Auto Repair Platform</h2>
+      <p>Find skilled mechanics near you in real-time.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About FixIt</h2>
+      <p>FixIt is your trusted online platform connecting vehicle owners with skilled mechanics in real-time. Whether your vehicle is damaged or in need of repair, we make it easy to find the nearest certified professionals.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Emergency Repairs</h3>
+          <p>Get immediate assistance for vehicle breakdowns.</p>
+        </div>
+        <div class="service-item">
+          <h3>Scheduled Maintenance</h3>
+          <p>Regular check-ups to keep your vehicle in top condition.</p>
+        </div>
+        <div class="service-item">
+          <h3>Certified Mechanics</h3>
+          <p>Skilled professionals with verified credentials.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-scroll">
+        <div class="gallery-grid">
+          <img src="https://i.postimg.cc/8PFDr4d8/automobilerepair1-1.jpg" alt="Car Repair 1">
+          <img src="https://i.postimg.cc/RhG9v9qc/OIP.jpg" alt="Car Repair 2">
+          <img src="https://i.postimg.cc/c49ZjspW/image.png" alt="Car Repair 3">
+          <img src="https://i.postimg.cc/pX7W04VX/two-people-man-repairing-woman-s-automobile-indoors-professional-service-photo.jpg" alt="Car Repair 4">
+          <img src="https://i.postimg.cc/66hBrVzy/8cbddf65-9a8a-4be5-bd7f-e9a3be5cb531.png " alt="Car Repair 5">
+          <img src="https://i.postimg.cc/G2FdSvCg/1-2.jpg " alt="Car Repair 6">
+          <img src="https://www.creativefabrica.com/wp-content/uploads/2022/09/12/Car-engine-repair-Service-worker-disass-Graphics-38345707-1.png" alt="Car Repair 7">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank">
+          Instagram
+          <img src="https://i.postimg.cc/FFy0Xbk4/icons8-instagram-logo-100.png" alt="Instagram Logo" class="social-logo">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          Facebook
+          <img src="https://i.postimg.cc/rwJhyXdq/icons8-facebook-logo-100.png"  alt="Facebook Logo" class="social-logo">
+        </a>
+        
+        <a href="https://t.me" target="_blank">
+          Telegram
+          <img src="https://i.postimg.cc/R0BXLpwW/icons8-telegram-logo-100.png" alt="Telegram Logo" class="social-logo">
+        </a>
+        <a href="https://wa.me" target="_blank">
+          WhatsApp
+          <img src="https://i.postimg.cc/XJDfmsBc/icons8-whatsapp-100.png" alt="WhatsApp Logo" class="social-logo">
+        </a>
+        <a href="mailto:info@example.com">
+          Email
+          <img src="https://i.postimg.cc/GtyyNdCd/icons8-gmail-logo-100.png" alt="Email Logo" class="social-logo">
+        </a>
+       
+        
+      </div>
+    </div>
+</section>
+
+
+  <!-- Login Modal -->
+<div id="loginPopup" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('loginPopup')">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <input type="email" name="email" placeholder="Email" required>
+        <div class="password-container">
+            <input type="password" name="password" id="login_password" placeholder="Password" required>
+            <i class="toggle-password" onclick="togglePassword('login_password')">👁</i>
+        </div>
+        <div class="captcha-container">
+            <div class="captcha-code" id="captcha-code-login"></div>
+            <input type="text" name="captcha" id="captcha-input-login" placeholder="Enter CAPTCHA" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <!-- Switch to Signup -->
+        <p class="switch-text">Don't have an account? <a href="#" onclick="switchPopup('loginPopup', 'signupPopup')">Sign Up</a></p>
+    </form>
+    </div>
+  </div>
+
+ 
+  <!-- Signup Modal -->
+<div id="signupPopup" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('signupPopup')">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signupForm" onsubmit="handleSignup(event)">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Mobile Number" required>
+        <div class="password-container">
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+            <i class="toggle-password" onclick="togglePassword('password')">👁</i>
+            <i class="toggle-password" onclick="togglePassword('confirm_password')">👁</i>
+        </div>
+        <div class="captcha-container">
+            <div class="captcha-code" id="captcha-code-signup"></div>
+            <input type="text" name="captcha" id="captcha-input-signup" placeholder="Enter CAPTCHA" required>
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+        <!-- Switch to Login -->
+        <p class="switch-text">Already have an account? <a href="#" onclick="switchPopup('signupPopup', 'loginPopup')">Login</a></p>
+    </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FixIt. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      if (input.type === 'password') {
+        input.type = 'text';
+      } else {
+        input.type = 'password';
+      }
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      // Add your login validation logic here
+      // For demonstration, we'll assume the login is successful and redirect to another page
+      window.location.href = 'dashboard.html'; // Replace 'dashboard.html' with your target page
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

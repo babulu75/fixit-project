@@ -1,0 +1,439 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-top: 80px; /* Space for fixed header */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+      background: #1e1e1e;
+      padding: 1px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .logo {
+      width: 50px;
+
+      height: 50px;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #ff5722;
+    }
+    
+    /* Navigation Links */
+    nav {
+      flex: 1; /* Take up remaining space */
+      display: flex;
+      justify-content: center; /* Center the navigation links */
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: #ff5722;
+    }
+    
+    /* Auth Buttons */
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+      margin-left: auto; /* Push to the right */
+    }
+    
+    .auth-buttons .btn {
+      padding: 8px 16px;
+      background: #e64a19;
+      border: 2px solid #d1d5d9;
+      color: #ffffff;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border-radius: 5px;
+    }
+    
+    .auth-buttons .btn:hover {
+      background: #ff5722;
+    }
+  /* Hero Section */
+  .hero {
+    background: #2a2a2a url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Popups */
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background: #1e1e1e;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px; /* Even smaller width for signup */
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  /* Specific to login Popup */  
+
+  /* Specific to Login Popup */
+#loginPopup .popup-content {
+    width: 280px; /* Same width as signup popup */
+    padding: 1rem; /* Same padding as signup popup */
+  }
+  
+  #loginPopup input {
+    width: 90%;
+    padding: 0.5rem; /* Reduced padding */
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reduced font size */
+  }
+  
+  #loginPopup button {
+    width: 100%;
+    padding: 0.5rem; /* Reduced padding */
+    background: #ff5722;
+    border: none;
+    color: #ffffff;
+    font-size: 0.9rem; /* Reduced font size */
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  #loginPopup button:hover {
+    background: #e64a19;
+  }
+  
+  #loginPopup .switch-text {
+    font-size: 12px; /* Reduced font size */
+  }
+  
+  /* Fix for Close Button */
+  .popup-overlay {
+    z-index: 1001; /* Higher than the header */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px; /* Increase top spacing */
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1002; /* Ensure it's above the popup content */
+  }
+
+  /* Specific to Signup Popup */  
+
+  #signupPopup input {
+    width: 90%;
+    padding: 0.5rem; /* Reduced padding */
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reduced font size */
+  }
+  
+  #signupPopup button {
+    width: 100%;
+    padding: 0.5rem; /* Reduced padding */
+    background: #ff5722;
+    border: none;
+    color: #ffffff;
+    font-size: 0.9rem; /* Reduced font size */
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+
+  #signupPopup .switch-text {
+    font-size: 12px; /* Reduced font size */
+  }
+  #signupPopup button:hover {
+    background: #e64a19;
+  }
+
+  /* Fix for Signup Popup Close Button */
+#signupPopup .close-btn {
+    position: absolute;
+    top: 15px; /* Increase top spacing */
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1002; /* Ensure it's above the popup content */
+}
+
+  .popup-content h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .popup-content input {
+    width: 90%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .popup-content button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ff5722;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .popup-content button:hover {
+    background: #e64a19;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  /* CAPTCHA Container */
+  .captcha-container {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .captcha-code {
+    padding: 5px 10px;
+    background: #2a2a2a;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #ff5722;
+  }
+  
+  /* Password Toggle */
+  .password-container {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+  }
+  .switch-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .switch-text a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .switch-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Other Sections (About, Services, Gallery, Contact) */
+  .about, .services, .gallery, .contact {
+    padding: 4rem 0;
+  }
+  
+  .about {
+    background: #1a1a1a;
+  }
+  
+  .services h2, .gallery h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .service-item {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Gallery Section */
+  .gallery {
+      padding: 4rem 0;
+      background: #262626;
+    }
+    
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .gallery-scroll {
+      overflow-x: auto; /* Enable horizontal scrolling */
+      white-space: nowrap; /* Prevent wrapping of images */
+      padding-bottom: 20px; /* Space for scrollbar */
+      -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+    
+    .gallery-scroll::-webkit-scrollbar {
+      display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+    
+    .gallery-grid {
+      display: inline-flex; /* Display images in a row */
+      gap: 15px; /* Space between images */
+    }
+    
+    .gallery-grid img {
+      width: 300px; /* Fixed width for each image */
+      height: 200px; /* Fixed height for each image */
+      border-radius: 8px;
+      object-fit: cover; /* Ensure images fill the container */
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-grid img:hover {
+      transform: scale(1.05); /* Zoom effect on hover */
+    }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+  }
+  
+  .social-links a {
+    display: flex;
+    flex-direction: column; /* Stack logo and name vertically */
+    align-items: center;
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px; /* Add space between each link */
+}
+
+.social-logo {
+    width: 50px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+    margin-bottom: 5px; /* Add some space between the logo and the name */
+}
+
+/* Responsive Design */
+
+
+  
+  /* Footer */
+  footer {
+    background: #1e1e1e;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 4rem;
+    color: #ffffff;
+  }
+  
+
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-list {
+      grid-template-columns: 1fr;
+    }
+  }
