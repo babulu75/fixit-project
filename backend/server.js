@@ -9,7 +9,7 @@ const port = 5000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: '*' }));
 
 // Serve static files from the frontend folder
 app.use(express.static(path.join(__dirname, '../frontend')));
