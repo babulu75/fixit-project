@@ -16,10 +16,10 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 
 // MySQL Connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root', // Replace with your MySQL username
-    password: 'Vinni@02#feb', // Replace with your MySQL password
-    database: 'fixit_db'
+    host: 'sql12.freesqldatabase.com',
+    user: 'sql12763007', // Replace with your MySQL username
+    password: '2UXAwVJiTu', // Replace with your MySQL password
+    database: 'sql12763007'
 });
 
 db.connect((err) => {
