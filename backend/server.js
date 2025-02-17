@@ -115,7 +115,7 @@ app.get('*', (req, res) => {
 
 // Start the server
 const server = app.listen(port, () => {
-    console.log(`Server running on https://fixit-com.onrender.com:${port}`);
+    console.log(`Server running on https://fixit-l2jp.onrender.com:${port}`);
 });
 
 // Graceful shutdown
