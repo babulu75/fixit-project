@@ -26,7 +26,7 @@ async function handleLogin(event) {
 
     try {
         // Send data to the backend
-        const response = await fetch('https://fixit-com.onrender.com/login', {
+        const response = await fetch('https://fixit-l2jp.onrender.com/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: data.email, password: data.password }) // Send only required fields
@@ -82,7 +82,7 @@ async function handleSignup(event) {
 
     try {
         // Send data to the backend
-        const response = await fetch('https://fixit-com.onrender.com/signup', {
+        const response = await fetch('https://fixit-l2jp.onrender.com/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
