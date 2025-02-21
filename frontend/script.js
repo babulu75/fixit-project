@@ -37,7 +37,8 @@ async function handleLogin(event) {
         if (response.ok) {
             alert(result.message);
             closePopup('loginPopup');
-            window.location.href = 'dashboard.html'; // Redirect to dashboard
+            window.location.href = `dashboard.html?user=${result.user.id}`;
+
         } else {
             alert(result.message || 'Login failed. Please try again.');
         }
